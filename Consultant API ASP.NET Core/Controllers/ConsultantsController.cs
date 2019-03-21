@@ -24,6 +24,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // GET api/consultants
+
         [HttpGet]
         public async Task<ActionResult<ConsultantViewModel[]>> Get(bool includeAddresses = false, bool includeCompetences = false)
         {
@@ -50,6 +51,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // GET api/consultants/5
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<ConsultantViewModel>> Get(int id, bool includeAddress = false, bool includeCompetences = false)
         {
@@ -77,6 +79,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
 
         //Create new consultant
         // POST api/consultants
+
         [HttpPost]
         public async Task<ActionResult<ConsultantViewModel>> Post(ConsultantViewModel model)
         {
@@ -97,6 +100,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // PUT api/consultants/5
+
         [HttpPut("{id:int}")]
         public async Task<ActionResult<ConsultantViewModel>> Put(int id, ConsultantViewModel model)
         {
@@ -120,6 +124,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // DELETE api/consultants/5
+
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id, bool deleteAddress = false)
         {

@@ -24,6 +24,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // GET api/competences
+
         [HttpGet]
         public async Task<ActionResult<CompetenceViewModel[]>> Get(bool includeConsultants = false)
         {
@@ -39,6 +40,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // GET api/competences/5
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<CompetenceViewModel>> Get(int id, bool includeConsultant = false)
         {
@@ -56,6 +58,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
 
         //Create new competence
         // POST api/competences
+
         [HttpPost]
         public async Task<ActionResult<CompetenceViewModel>> Post(CompetenceViewModel model)
         {
@@ -76,6 +79,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // PUT api/competences/5
+
         [HttpPut("{id:int}")]
         public async Task<ActionResult<CompetenceViewModel>> Put(int id, CompetenceViewModel model)
         {
@@ -97,6 +101,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // DELETE api/competences/5
+
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {

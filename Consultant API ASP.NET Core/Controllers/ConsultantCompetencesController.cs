@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Routing;
 using System;
 using System.Threading.Tasks;
 using Consultant_API_ASP.NET_Core.Data;
-using Consultant_API_ASP.NET_Core.Data.Entities;
 using Consultant_API_ASP.NET_Core.Models;
 
 namespace Consultant_API_ASP.NET_Core.Controllers
@@ -24,6 +23,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // GET api/consultant/{id:int}/competences
+
         [HttpGet]
         public async Task<ActionResult<CompetenceViewModel[]>> Get(int id)
         {

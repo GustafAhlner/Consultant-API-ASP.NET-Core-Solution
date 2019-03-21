@@ -24,6 +24,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // GET api/addresses
+
         [HttpGet]
         public async Task<ActionResult<AddressViewModel[]>> Get(bool includeConsultants = false)
         {
@@ -39,6 +40,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // GET api/addresses/5
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<AddressViewModel>> Get(int id, bool includeConsultant = false)
         {
@@ -68,6 +70,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
 
         //Create new address
         // POST api/addresses
+
         [HttpPost]
         public async Task<ActionResult<AddressViewModel>> Post(AddressViewModel model)
         {
@@ -88,6 +91,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // PUT api/addresses/5
+
         [HttpPut("{id:int}")]
         public async Task<ActionResult<AddressViewModel>> Put(int id, AddressViewModel model)
         {
@@ -109,6 +113,7 @@ namespace Consultant_API_ASP.NET_Core.Controllers
         }
 
         // DELETE api/addresses/5
+
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
