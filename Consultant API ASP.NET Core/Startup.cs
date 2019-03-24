@@ -28,8 +28,7 @@ namespace Consultant_API_ASP.NET_Core
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost:9999",
-                        "https://localhost:44346");
+                    builder.AllowAnyOrigin();
                 });
             });
 
