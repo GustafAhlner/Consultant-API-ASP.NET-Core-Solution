@@ -16,7 +16,7 @@ namespace Consultant_API_ASP.NET_Core
             Configuration = configuration;
         }
 
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        readonly string MyAllowSpecificOrigins = "*";
 
         public IConfiguration Configuration { get; }
 
@@ -28,7 +28,9 @@ namespace Consultant_API_ASP.NET_Core
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.AllowAnyOrigin();
+                    builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
                 });
             });
 
