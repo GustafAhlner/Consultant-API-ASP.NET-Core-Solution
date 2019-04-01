@@ -1,7 +1,14 @@
-# Consultant App ASP.NET-Core API
-This is the back end for the [Consultant App Angular Front End](https://github.com/GustafAhlner/Consultant-Front-Angular-ClientApp)
-This project was built in Visual Studio 2017 in ASP.NET Core 2.2.
+This repository contains a Web API application built in Visual Studio 2017 using ASP.NET Core 2.2 and Entity Framework 6.
 
-##Features
-A code first Entity Framework 6 built Web API for a consulant database.
-The database has a one-to-many relationship between consultants and their addresses, and a many-to-many relationship between consultants and their competences. 
+- [Consultant Front End Angular Project](https://github.com/gustaf-a/Consultant-Front-Angular-ClientApp)
+
+# Current features:
+
+- Consulant database built code first with EF6
+- Addresses (one consultant to many addresses)
+- Competences for consultants (many-to-many)
+
+### Future plans:
+
+- Log in and authorization
+- Uploading of images
