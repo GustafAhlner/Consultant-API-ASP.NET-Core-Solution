@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace Consultant_API_ASP.NET_Core
 {
@@ -42,6 +43,17 @@ namespace Consultant_API_ASP.NET_Core
             services.AddScoped<IConsultantRepository, ConsultantRepository>();
 
             services.AddAutoMapper();
+
+            services.AddApiVersioning(opt =>
+            {
+                opt.AssumeDefaultVersionWhenUnspecified = true;
+                opt.DefaultApiVersion = new ApiVersion(1, 0);
+                opt.ReportApiVersions = true;
+                opt.ApiVersionReader = ApiVersionReader.Combine(
+                    new QueryStringApiVersionReader("version", "ver", "v"),
+                    new HeaderApiVersionReader("X-Version", "Version", "Ver", "V"));
+            }
+            );
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
